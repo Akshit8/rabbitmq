@@ -3,12 +3,7 @@ const argv = require('minimist')(process.argv.slice(1));
 
 const { host } = argv;
 
-/**
- * implemenation with callbacks
- * basic implementation
- * channel connection close not handled
- */
-const impl1 = async () => {
+const consumer1 = async () => {
     amqp.connect(`amqp://${host}`, (err0, connection) => {
         if(err0) throw err0;
         connection.createChannel((err1, channel) => {
@@ -20,8 +15,14 @@ const impl1 = async () => {
                 durable: false
             });
 
-            channel.sendToQueue(queue, Buffer.from(msg));
-            console.log('message published');
+            channel.consume(queue, (msg) => {
+                console.log(`Recieved Message: ${msg.content.toString()}`);
+            }, {
+                noAck: true
+            });
+            console.log('message consumed');
         });
     });
 };
+
+consumer1();

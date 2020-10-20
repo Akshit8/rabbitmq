@@ -16,5 +16,5 @@ docker rm -f rabbit-name
 ## setting up rabbitmq with management console and exposing required ports
 ```
 # no SSL, erlang cookie set, directly exposed
-docker container run -d -p 3000:5672 -p 3001:15672 --name rabbit-mq rabbitmq:3.8-management  
+docker container run -d -p 5672:5672 -p 3001:15672 --name rabbit-mq rabbitmq:3.8-management  
 ```
