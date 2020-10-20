@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/akshit8/rabbitmq#readme",
   "dependencies": {
-    "amqplib": "^0.6.0"
+    "amqplib": "^0.6.0",
+    "minimist": "^1.2.5"
   }
 }
