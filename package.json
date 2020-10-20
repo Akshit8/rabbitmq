@@ -1,0 +1,28 @@
+{
+  "name": "rabbitmq",
+  "version": "1.0.0",
+  "description": "running rabbitmq on docker and using nodejs as client",
+  "main": "index.js",
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshit8/rabbitmq.git"
+  },
+  "keywords": [
+    "rabbitmq",
+    "docker",
+    "amqp",
+    "nodejs"
+  ],
+  "author": "Akshit Sadana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshit8/rabbitmq/issues"
+  },
+  "homepage": "https://github.com/akshit8/rabbitmq#readme",
+  "dependencies": {
+    "amqplib": "^0.6.0"
+  }
+}
